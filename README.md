@@ -12,7 +12,7 @@ The letters are build in a 7x5 grid.
 
 As an example, consider the letter 'A'. It can be represented by 0's and 1's in a 5x7 grid as:
 
-0 1 1 1 0
+0 1 1 1 0<br>
 1 0 0 0 1
 1 0 0 0 1
 1 1 1 1 1
