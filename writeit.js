@@ -49,6 +49,7 @@ Feel free to reach out on Twitter:
 https://twitter.com/ChristianRiis
 
 */
+var Drone = require('drone');
 
 function writeit(stringToDraw) {
   if (typeof stringToDraw == 'undefined') {
@@ -62,10 +63,10 @@ function writeit(stringToDraw) {
   d.up(7); //characters are 7 blocks high.
   for (k = 0; k < letterArray.length; k++) {
     currentChar = String(letterArray[k]);
-    // console.log('drawLetter: ' + currentChar);
+    console.log('drawLetter: ' + currentChar);
     if (currentChar == ' ') {
       d.right(3);
-      // console.log('space detected');
+      console.log('space detected');
     }
     else {
       drawLetter(d, currentChar);
@@ -94,10 +95,7 @@ function drawLetter(objDrone, letterToDraw) {
   for (i = 0; i < 7; i++) {
     // each block in the horizontal line
     for (j = 0; j < 5; j++) {
-      if (pen[pos] == '0') {
-        objDrone.box(blocks.air,1,1,1);
-      }
-      else {
+      if (pen[pos] == '1') {
         objDrone.box(blocks.oak,1,1,1);
       }
       var pos = pos + 1;
